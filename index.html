@@ -23,6 +23,7 @@
 																		  subject (subjectScheme-->
 <!-- modified: 2019-10-10 osmancakirio - Date Information field added -->
 <!-- modified: 2019-10-21 osmancakirio - Information links added -->
+<!-- modified: 2020-08-14 aborel - EPFL adaptations of M/R/O fields -->
 
 
 <head>
@@ -754,9 +755,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<h3 class="recommended">+ Recommended Elements</h3>
-	<div id="recommended" class="form recommended hidden">
+	
 		<div title="subjects" class="section wrapper-tag">
 			<span class="tag-group-label">Subject(s):
 			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#subject" target="_blank"> ? </a>
@@ -773,6 +772,40 @@
 			</div>
 		</div>
 		<span class="divider">&nbsp;</span>
+		<div title="descriptions" class="section wrapper-tag">
+			<span class="tag-group-label">Description:
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#description" target="_blank"> ? </a>
+			</span>
+			<button type="button" class="add group">+</button>
+			<div class="tag-group">
+				<div title="description" class="tag">
+					<input class="half-width input-field tag-value" type="text" placeholder="[DESCRIPTION]" title="description" value="" />
+					<input class="language half-width input-field tag-attribute" type="text" maxlength="3" placeholder="[LANG]" title="xml:lang" value="" />
+					<select class="half-width input-field tag-attribute" title="descriptionType"></select>
+				</div>
+			</div>
+		</div>
+		<span class="divider">&nbsp;</span>
+		<div title="rightsList" class="section wrapper-tag">
+			<span class="tag-group-label">Rights List:
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#rights" target="_blank"> ? </a>
+			</span>
+			<button type="button" class="add group">+</button>
+			<div class="tag-group">
+				<div title="rights" class="tag">
+					<input class="full-width input-field tag-value" type="text" placeholder="[RIGHTS]" title="rights" value="" />
+					<input class="language half-width input-field tag-attribute" type="text" maxlength="3" placeholder="[LANG]" title="xml:lang" value="" />
+					<input class="half-width input-field tag-attribute" type="text" placeholder="[SCHEME URI]" title="schemeURI" value="" />
+					<input class="half-width input-field tag-attribute" type="text" placeholder="[RIGHTS IDENTTIFIER SCHEME]" title="rightsIdentifierScheme" value="" />
+					<input class="half-width input-field tag-attribute" type="text" placeholder="[RIGHTS IDENTIFIER]" title="rightsIdentifier" value="" />
+					<input class="half-width input-field tag-attribute" type="text" placeholder="[RIGHTS URI]" title="rightsURI" value="" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3 class="recommended">+ Recommended Elements</h3>
+	<div id="recommended" class="form recommended hidden">
+		
 		<div title="contributors" class="section wrapper-tag">
 			<span class="tag-group-label">Contributor(s):
 			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#contributor" target="_blank"> ? </a>
@@ -832,17 +865,95 @@
 				</div>
 			</div>
 		</div>
+		
+		
+	</div>
+	<h3 class="other">+ Other Elements</h3>
+	<div id="other" class="form other hidden">
+		<div class="section">
+			<span class="tag-group-label">Language:
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#language" target="_blank"> ? </a>
+			</span>
+			<div class="tag-group">
+				<div title="language" class="tag">
+					<input class="full-width input-field tag-value" type="text" maxlength="3" placeholder="[LANG]" title="language" value="" />
+				</div>
+			</div>
+		</div>
 		<span class="divider">&nbsp;</span>
-		<div title="descriptions" class="section wrapper-tag">
-			<span class="tag-group-label">Description:
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#description" target="_blank"> ? </a>
+		<div title="alternateIdentifiers" class="section wrapper-tag">
+			<span class="tag-group-label">Alternate Identifier(s):
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#alternateidentifier" target="_blank"> ?</a>
 			</span>
 			<button type="button" class="add group">+</button>
 			<div class="tag-group">
-				<div title="description" class="tag">
-					<input class="half-width input-field tag-value" type="text" placeholder="[DESCRIPTION]" title="description" value="" />
-					<input class="language half-width input-field tag-attribute" type="text" maxlength="3" placeholder="[LANG]" title="xml:lang" value="" />
-					<select class="half-width input-field tag-attribute" title="descriptionType"></select>
+				<div title="alternateIdentifier" class="tag">
+					<input class="half-width input-field tag-value" type="text" placeholder="[ALTERNATE IDENTIFIER]" title="alternateIdentifier" value="" />
+					<input class="half-width input-field tag-attribute" type="text" placeholder="[ALTERNATE ID TYPE]" title="alternateIdentifierType" value="" />
+				</div>
+			</div>
+		</div>
+		<!-- Do not display this image at the moment
+		<span class="divider">&nbsp;</span>
+		<div title="sizes" class="section wrapper-tag">
+			<span class="tag-group-label">Size(s):
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#size" target="_blank"> ?</a>
+			</span>
+			<button type="button" class="add group">+</button>
+			<div class="tag-group">
+				<div title="size" class="tag">
+					<input class="full-width input-field tag-value" type="text" placeholder="[SIZE]" title="size" value="" />
+				</div>
+			</div>
+		</div>
+		<span class="divider">&nbsp;</span>
+		<div title="formats" class="section wrapper-tag">
+			<span class="tag-group-label">Format(s):
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#format" target="_blank"> ? </a>
+			</span>
+			<button type="button" class="add group">+</button>
+			<div class="tag-group">
+				<div title="format" class="tag">
+					<input class="full-width input-field tag-value" type="text" placeholder="[FORMAT]" title="format" value="" />
+				</div>
+			</div>
+		</div>
+		<span class="divider">&nbsp;</span>
+		<div class="section">
+			<span class="tag-group-label">Version:
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#version" target="_blank"> ? </a>
+			</span>
+			<div class="tag-group">
+				<div title="version" class="tag">
+					<input class="full-width input-field tag-value" type="text" placeholder="[VERSION]" title="version" value="" />
+				</div>
+			</div>
+		</div>
+		-->
+		
+		<span class="divider">&nbsp;</span>
+		<div title="fundingReferences" class="section wrapper-tag">
+			<span class="tag-group-label">Funding Reference:
+			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#fundingreference" target="_blank"> ? </a>
+			</span>
+			<button type="button" class="add group">+</button>
+			<div class="tag-group">
+				<div title="fundingReference" class="tag">
+					<div title="funderName" class="tag">
+						<input class="full-width input-field tag-value" type="text" placeholder="[FUNDER NAME]" title="funderName" value="" />
+					</div>
+					<div title="funderIdentifier" class="tag">
+						<input class="half-width input-field tag-value" type="text" placeholder="[FUNDER IDENTIFIER]" title="funderIdentifier" value="" />
+						<select class="half-width input-field tag-attribute" title="funderIdentifierType"></select>
+					</div>
+					<div title="awardNumber" class="tag">
+						<input class="half-width input-field tag-value" type="text" placeholder="[AWARD NUMBER]" title="awardNumber" value="" />
+						<input title="awardURI" class="half-width input-field tag-attribute" type="text" placeholder="[AWARD URI]" title="awardURI" value="" />2
+					</div>
+					<div title="awardTitle" class="tag">
+						<input class="full-width input-field tag-value" type="text" placeholder="[AWARD TITLE]" title="awardTitle" value="" />
+						<input class="language half-width input-field tag-attribute" type="text" maxlength="3" placeholder="[LANG]" title="xml:lang" value="" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -915,110 +1026,6 @@
 								<input class="half-width-smaller input-field tag-value" type="text" placeholder="[POINT LATITUDE]" title="pointLatitude" value="" />
 							</div><button type="button" class="add single-tag">+</button>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<h3 class="other">+ Other Elements</h3>
-	<div id="other" class="form other hidden">
-		<div class="section">
-			<span class="tag-group-label">Language:
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#language" target="_blank"> ? </a>
-			</span>
-			<div class="tag-group">
-				<div title="language" class="tag">
-					<input class="full-width input-field tag-value" type="text" maxlength="3" placeholder="[LANG]" title="language" value="" />
-				</div>
-			</div>
-		</div>
-		<span class="divider">&nbsp;</span>
-		<div title="alternateIdentifiers" class="section wrapper-tag">
-			<span class="tag-group-label">Alternate Identifier(s):
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#alternateidentifier" target="_blank"> ?</a>
-			</span>
-			<button type="button" class="add group">+</button>
-			<div class="tag-group">
-				<div title="alternateIdentifier" class="tag">
-					<input class="half-width input-field tag-value" type="text" placeholder="[ALTERNATE IDENTIFIER]" title="alternateIdentifier" value="" />
-					<input class="half-width input-field tag-attribute" type="text" placeholder="[ALTERNATE ID TYPE]" title="alternateIdentifierType" value="" />
-				</div>
-			</div>
-		</div>
-		<span class="divider">&nbsp;</span>
-		<div title="sizes" class="section wrapper-tag">
-			<span class="tag-group-label">Size(s):
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#size" target="_blank"> ?</a>
-			</span>
-			<button type="button" class="add group">+</button>
-			<div class="tag-group">
-				<div title="size" class="tag">
-					<input class="full-width input-field tag-value" type="text" placeholder="[SIZE]" title="size" value="" />
-				</div>
-			</div>
-		</div>
-		<span class="divider">&nbsp;</span>
-		<div title="formats" class="section wrapper-tag">
-			<span class="tag-group-label">Format(s):
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#format" target="_blank"> ? </a>
-			</span>
-			<button type="button" class="add group">+</button>
-			<div class="tag-group">
-				<div title="format" class="tag">
-					<input class="full-width input-field tag-value" type="text" placeholder="[FORMAT]" title="format" value="" />
-				</div>
-			</div>
-		</div>
-		<span class="divider">&nbsp;</span>
-		<div class="section">
-			<span class="tag-group-label">Version:
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#version" target="_blank"> ? </a>
-			</span>
-			<div class="tag-group">
-				<div title="version" class="tag">
-					<input class="full-width input-field tag-value" type="text" placeholder="[VERSION]" title="version" value="" />
-				</div>
-			</div>
-		</div>
-		<span class="divider">&nbsp;</span>
-		<div title="rightsList" class="section wrapper-tag">
-			<span class="tag-group-label">Rights List:
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#rights" target="_blank"> ? </a>
-			</span>
-			<button type="button" class="add group">+</button>
-			<div class="tag-group">
-				<div title="rights" class="tag">
-					<input class="full-width input-field tag-value" type="text" placeholder="[RIGHTS]" title="rights" value="" />
-					<input class="language half-width input-field tag-attribute" type="text" maxlength="3" placeholder="[LANG]" title="xml:lang" value="" />
-					<input class="half-width input-field tag-attribute" type="text" placeholder="[SCHEME URI]" title="schemeURI" value="" />
-					<input class="half-width input-field tag-attribute" type="text" placeholder="[RIGHTS IDENTTIFIER SCHEME]" title="rightsIdentifierScheme" value="" />
-					<input class="half-width input-field tag-attribute" type="text" placeholder="[RIGHTS IDENTIFIER]" title="rightsIdentifier" value="" />
-					<input class="half-width input-field tag-attribute" type="text" placeholder="[RIGHTS URI]" title="rightsURI" value="" />
-				</div>
-			</div>
-		</div>
-		<span class="divider">&nbsp;</span>
-		<div title="fundingReferences" class="section wrapper-tag">
-			<span class="tag-group-label">Funding Reference:
-			<a class="tag-group-info" href="https://github.com/UB-LMU/DataCite_BestPracticeGuide/blob/master/BestPracticeGuide.md#fundingreference" target="_blank"> ? </a>
-			</span>
-			<button type="button" class="add group">+</button>
-			<div class="tag-group">
-				<div title="fundingReference" class="tag">
-					<div title="funderName" class="tag">
-						<input class="full-width input-field tag-value" type="text" placeholder="[FUNDER NAME]" title="funderName" value="" />
-					</div>
-					<div title="funderIdentifier" class="tag">
-						<input class="half-width input-field tag-value" type="text" placeholder="[FUNDER IDENTIFIER]" title="funderIdentifier" value="" />
-						<select class="half-width input-field tag-attribute" title="funderIdentifierType"></select>
-					</div>
-					<div title="awardNumber" class="tag">
-						<input class="half-width input-field tag-value" type="text" placeholder="[AWARD NUMBER]" title="awardNumber" value="" />
-						<input title="awardURI" class="half-width input-field tag-attribute" type="text" placeholder="[AWARD URI]" title="awardURI" value="" />2
-					</div>
-					<div title="awardTitle" class="tag">
-						<input class="full-width input-field tag-value" type="text" placeholder="[AWARD TITLE]" title="awardTitle" value="" />
-						<input class="language half-width input-field tag-attribute" type="text" maxlength="3" placeholder="[LANG]" title="xml:lang" value="" />
 					</div>
 				</div>
 			</div>
