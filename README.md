@@ -26,7 +26,7 @@ Uses:
 =====
 - HTML5
 - CSS3
-- JQuery 3.1.1
+- JQuery 3.5.1
 
 Notes:
 ======
