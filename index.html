@@ -24,6 +24,7 @@
 <!-- modified: 2019-10-10 osmancakirio - Date Information field added -->
 <!-- modified: 2019-10-21 osmancakirio - Information links added -->
 <!-- modified: 2020-08-14 aborel - EPFL adaptations of M/R/O fields -->
+<!-- modified: 2020-08-26 aborel - Namespace fix for compliance with the Datacite schema & tools that use it -->
 
 
 <head>
@@ -33,7 +34,7 @@
 	<script type = "text/javascript" >
 		$(document).ready(function() {
 			var kernelVersion = "4.3";
-			var kernelNamespace = "https://schema.datacite.org/meta/kernel-4.3/";
+			var kernelNamespace = "http://datacite.org/schema/kernel-4";
 			var kernelSchema = "https://schema.datacite.org/meta/kernel-4.3/metadata.xsd";
 			var kernelSchemaLocation = kernelNamespace + " " + kernelSchema;
 			var header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + br() + "<resource xmlns=\"" + kernelNamespace + "\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"" + kernelSchemaLocation + "\">" + br();
